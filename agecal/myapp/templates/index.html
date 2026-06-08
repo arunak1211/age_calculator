@@ -1,0 +1,10 @@
+<form method="POST">
+    {% csrf_token %}
+    <label>Select your Birth Date:</label>
+    <input type="date" name="birth_date" required>
+    <button type="submit">Calculate Age</button>
+</form>
+
+{% if age is not None %}
+    <h3>You are {{ age }} years old!</h3>
+{% endif %}
